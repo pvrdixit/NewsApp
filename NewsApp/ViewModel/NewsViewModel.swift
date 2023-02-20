@@ -13,7 +13,7 @@ struct NewsViewModel
     func getNewsByCountry(completion: @escaping(_ result: [Article], _ message: String?)-> Void)
     {
         let countryCode = UserDefaultUtility().getCountryCode()
-        let newsRequest = NewsRequest(countryCode: countryCode)
+        let newsRequest = NewsRequest(countryCode: countryCode, apiKey: ApiEndpoints.apiKey)
         let newsResource = NewsResource()
         
         newsResource.getNewsByCountry(newsRequest: newsRequest) { (newsResponse) in

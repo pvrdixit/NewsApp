@@ -10,12 +10,15 @@ import Foundation
 struct NewsRequest
 {
     private let countryCode: String
+    private let apiKey: String
+
     var requestURL: URL {
-        let urlString = "\(ApiEndpoints.newsRequest)?country=\(countryCode)&apiKey=\(ApiEndpoints.apiKey)"
+        let urlString = "\(ApiEndpoints.newsRequest)?country=\(countryCode)&apiKey=\(apiKey)"
         return URL(string: urlString)!
     }
     
-    init(countryCode: String) {
+    init(countryCode: String, apiKey: String) {
         self.countryCode = countryCode
+        self.apiKey = apiKey
     }
 }
