@@ -29,6 +29,9 @@
 		8408C22529A310A20018ACB1 /* ViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8408C22429A310A20018ACB1 /* ViewControllerExtension.swift */; };
 		8408C22829A31DC80018ACB1 /* WebVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8408C22729A31DC80018ACB1 /* WebVC.swift */; };
 		8408C22A29A3447E0018ACB1 /* NewsResourceUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8408C22929A3447E0018ACB1 /* NewsResourceUnitTests.swift */; };
+		8408C22D29A34DC80018ACB1 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 8408C22C29A34DC80018ACB1 /* FirebaseAnalytics */; };
+		8408C22F29A34DC80018ACB1 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 8408C22E29A34DC80018ACB1 /* FirebaseAnalyticsSwift */; };
+		8408C23329A34EE50018ACB1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8408C23229A34EE50018ACB1 /* GoogleService-Info.plist */; };
 		CDDECA336F63FBDDFD7112CF /* Pods_NewsAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A97F8E0AC158DCD8F0E4DC96 /* Pods_NewsAppTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -78,6 +81,7 @@
 		8408C22429A310A20018ACB1 /* ViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExtension.swift; sourceTree = "<group>"; };
 		8408C22729A31DC80018ACB1 /* WebVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebVC.swift; sourceTree = "<group>"; };
 		8408C22929A3447E0018ACB1 /* NewsResourceUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsResourceUnitTests.swift; sourceTree = "<group>"; };
+		8408C23229A34EE50018ACB1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8FEF8CADC3C29E5E237186FF /* Pods-NewsApp-NewsAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsApp-NewsAppUITests.release.xcconfig"; path = "Target Support Files/Pods-NewsApp-NewsAppUITests/Pods-NewsApp-NewsAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A97F8E0AC158DCD8F0E4DC96 /* Pods_NewsAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NewsAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1CE2BE620C339CEA0262FBB /* Pods-NewsApp-NewsAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsApp-NewsAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-NewsApp-NewsAppUITests/Pods-NewsApp-NewsAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -90,6 +94,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8408C22F29A34DC80018ACB1 /* FirebaseAnalyticsSwift in Frameworks */,
+				8408C22D29A34DC80018ACB1 /* FirebaseAnalytics in Frameworks */,
 				45CD02C8EA72582DEC0FEF3E /* Pods_NewsApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -174,6 +180,7 @@
 				8408C1E329A2F3FF0018ACB1 /* Assets.xcassets */,
 				8408C1E529A2F3FF0018ACB1 /* LaunchScreen.storyboard */,
 				8408C1E829A2F3FF0018ACB1 /* Info.plist */,
+				8408C23229A34EE50018ACB1 /* GoogleService-Info.plist */,
 			);
 			path = NewsApp;
 			sourceTree = "<group>";
@@ -274,6 +281,10 @@
 			dependencies = (
 			);
 			name = NewsApp;
+			packageProductDependencies = (
+				8408C22C29A34DC80018ACB1 /* FirebaseAnalytics */,
+				8408C22E29A34DC80018ACB1 /* FirebaseAnalyticsSwift */,
+			);
 			productName = NewsApp;
 			productReference = 8408C1D729A2F3FE0018ACB1 /* NewsApp.app */;
 			productType = "com.apple.product-type.application";
@@ -349,6 +360,9 @@
 				Base,
 			);
 			mainGroup = 8408C1CE29A2F3FE0018ACB1;
+			packageReferences = (
+				8408C22B29A34DC80018ACB1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 8408C1D829A2F3FE0018ACB1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -367,6 +381,7 @@
 			files = (
 				8408C1E729A2F3FF0018ACB1 /* LaunchScreen.storyboard in Resources */,
 				8408C22329A30A4E0018ACB1 /* NewsViewCell.xib in Resources */,
+				8408C23329A34EE50018ACB1 /* GoogleService-Info.plist in Resources */,
 				8408C1E429A2F3FF0018ACB1 /* Assets.xcassets in Resources */,
 				8408C1E229A2F3FE0018ACB1 /* Main.storyboard in Resources */,
 			);
@@ -866,6 +881,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8408C22B29A34DC80018ACB1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8408C22C29A34DC80018ACB1 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8408C22B29A34DC80018ACB1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		8408C22E29A34DC80018ACB1 /* FirebaseAnalyticsSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8408C22B29A34DC80018ACB1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8408C1CF29A2F3FE0018ACB1 /* Project object */;
 }

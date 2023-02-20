@@ -7,6 +7,7 @@
 
 import UIKit
 import WebKit
+import FirebaseAnalytics
 
 class WebVC: UIViewController, WKNavigationDelegate {
     
@@ -31,6 +32,8 @@ class WebVC: UIViewController, WKNavigationDelegate {
                 self.navigationController?.popViewController(animated: false)
             }
         }
+        
+        Analytics.logEvent("webVC", parameters: ["activity": "Opened web view"])
     }
     
     
